@@ -10,7 +10,7 @@ def initialize_spark():
     
     spark = SparkSession.builder \
         .appName('Practise') \
-        .config("spark.jars", "C:\\Users\Mahateer Muhammad\\Desktop\retail data analyzer with pyspark\\jars\\postgresql-42.7.1.jar") \
+        .config("spark.jars", "C:\\Users\\Mahateer Muhammad\\Desktop\\retail data analyzer with pyspark\\jars\\postgresql-42.7.1.jar") \
         .getOrCreate()
     
     spark.sparkContext.setLogLevel("ERROR")
@@ -23,7 +23,7 @@ def load_data(spark):
     print("="*50)
     
     df = spark.read.option("header", "true").csv(
-        "C:\\Users\Mahateer Muhammad\\Desktop\\retail data analyzer with pyspark\\data\\Online-Retail.csv", 
+        "C:\\Users\\Mahateer Muhammad\\Desktop\\retail data analyzer with pyspark\\data\\Online-Retail.csv", 
         inferSchema=True
     )
     
